@@ -14,14 +14,31 @@ import javax.servlet.http.HttpServletResponse;
 public class Base extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("<!DOCTYPE html><html><head>" +
+		response.getWriter().append(
+				 
+				
+				
+				"<!DOCTYPE html><html><head>" +
 				"<title>Base</title>" +
-				"<head><body><h1>Dit is de basis.</h1></body></html>");
+				"<head><body><h1>Dit is de basis.</h1>"
+				+ "<form method = get action = Welkom>"
+				+ "Wat is uw naam? <input type = \"text\" name = \"userName\"><br>"
+				+ "Lievelingsnummer <input type = \"number\" name = \"favoriteNumber\"><br>"
+				+ "<input type = \"submit\"><br>"
+				+ "Maak een keuze!<br>"
+				+ "<input type = \"radio\" name = \"otherNumber\" value = \"200\" /> 200"
+				+ "<input type = \"radio\" name = \"otherNumber\" value = \"400\" /> 400"
+				+ "<input type = \"radio\" name = \"otherNumber\" value = \"404\" /> 404"
+				+ "<input type = \"radio\" name = \"otherNumber\" value = \"418\" /> 418"
+				+ "<input type = \"radio\" name = \"otherNumber\" value = \"500\" /> 500"
+				
+				+ "</form>"
+				+ ""
+				+ "</body></html>");
 	}
 
 	/**

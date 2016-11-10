@@ -13,16 +13,23 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Welkom")
 public class Welkom extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+    
+	private static String userName;
+	private static String favoriteNumber;
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+	userName= request.getParameter("userName");
+	favoriteNumber = request.getParameter("favoriteNumber");
+		
 	response.getWriter()
+	
+	
 		
 		.append("<!DOCTYPE html><html><head>" +
 			"<title>mijn eerste servlet</title>" +
-			"<head><body><h1>Welkom</h1><br>" +
+			"<head><body><h1>Welkom, " + userName + "</h1><br>" +
+			"Nummer: " + favoriteNumber +
 			"</body></html>");
 			
 	}
