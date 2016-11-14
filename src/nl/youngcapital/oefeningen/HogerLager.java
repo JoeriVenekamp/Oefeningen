@@ -20,18 +20,12 @@ public class HogerLager extends HttpServlet {
 		if (request.getSession(false) == null){
 			request.getRequestDispatcher("/WEB-INF/WelcomeHogerLager.jsp").forward(request, response);
 		}
-		
-//		request.setAttribute("userName", userName);
-//		request.setAttribute("output", output);
-//		request.setAttribute("countOutput", countOutput);
-//		
+	
 		request.getRequestDispatcher("/WEB-INF/HogerLager.jsp").forward(request, response);				
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
-		
-//		guess = request.getParameter("guess");
+		doGet(request, response);	
 		
 		HttpSession session = request.getSession();
 		
@@ -40,6 +34,8 @@ public class HogerLager extends HttpServlet {
 		if(session.getAttribute("guess") != null){
 	
 			
+			
+		
 //			if(answer == Integer.parseInt(guess)){
 //				output = "Je hebt Gewonnen!";
 //			}
