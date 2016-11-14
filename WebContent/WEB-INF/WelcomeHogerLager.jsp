@@ -9,8 +9,10 @@
 <body>
 <h1>Welkom bij HogerLager</h1>
 
+U speelt voor het eerst HogerLager<br>
+
 Wat is uw naam?
-<form method="post" action="">
+<form method="post" action="/Welkom">
 	<input type="text" name="userName">
 	<input type="submit">
 	

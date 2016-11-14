@@ -9,18 +9,21 @@
 <body>
 	
 	<h1>Hoger of Lager!</h1>
+	
+	Hallo <%= request.getAttribute("userName") %><br>
+	
 	Raad het getal <form method="post" action="" >
 	<input type = "text" name = "guess">
 	<input type = "submit"><br>
 	</form>
 	
-	<% if (request.getAttribute("output") != null){ %>
-		<%= request.getAttribute("output") %>
-	<% } %>
-	<br>
-	<% if (request.getAttribute("countOutput") != null){ %>
-		<%= request.getAttribute("countOutput") %>
-	<% } %>
+<%-- 	<% if (request.getAttribute("output") != null){ %> --%>
+<%-- 		<%= request.getAttribute("output") %> --%>
+<%-- 	<% } %> --%>
+<!-- 	<br> -->
+<%-- 	<% if (request.getAttribute("countOutput") != null){ %> --%>
+<%-- 		<%= request.getAttribute("countOutput") %> --%>
+<%-- 	<% } %> --%>
 	
 	
 </body>
