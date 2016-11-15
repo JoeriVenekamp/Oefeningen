@@ -20,7 +20,7 @@ public class Basis {
 		return count;
 	}
 	
-	boolean correct (int guess){
+	boolean isCorrect (int guess){
 		this.count++;
 		return guess == this.answer;
 	}
